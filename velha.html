@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JOGO DA VELHA</title>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src='velha/main.js'></script>
+		<style>
+			td {
+				opacity: 0%;
+				border: 4px solid #000000;
+				width: 100px;
+				height: 100px;
+				font-size: 50px;
+				text-align: center;
+			}
+
+			h2 {
+				font-size: 40px;
+			}
+
+			table {
+				margin-left:auto; 
+				margin-right:auto;
+				border-collapse: collapse;
+				margin-bottom: 20px;
+				padding-bottom: 2.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>JOGO DA VELHA</h1>
+		</header>
+		<div id="draw"></div>
+		<footer>
+			<p><a class="home" href="index.html"><b>Back to Home</b></a></p>
+		</footer>
+	</body>
+
+	<script>
+		var draw = $("#draw");
+		var order = 3;
+		
+		var boardArray = new Array();
+		
+		for(var i = 0; i < order; i++) {
+			boardArray.push(new Array());
+			for (var j = 0; j < order; j++) {
+				boardArray[i].push(0);
+			}
+		}
+
+		draw.onload = desenhar(order);
+	</script>
+</html>
