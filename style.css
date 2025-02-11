@@ -1,0 +1,28 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+@keyframes gradient {
+    0% {background-position-x: 0%;}
+    100% {background-position-x: 400%;}
+}
+
+body {
+    background: linear-gradient(90deg, rgb(255, 121, 246) 0%, rgb(66, 252, 112) 50%, rgb(255, 121, 246) 100%); 
+    background-size: 400% 100%;
+    background-attachment: fixed;
+    background-position-x: 0%;
+    animation: gradient 50s infinite;
+    animation-timing-function: linear;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.center {
+    text-align: center;
+    font-size: 3vh;
+}
